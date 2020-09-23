@@ -1,0 +1,20 @@
+input[name="search"] {
+	background-color: #5CCFDB4b;
+	color: var(--light);
+	max-width: 500px;
+	width: 80%;
+	box-shadow: 0 0 20px rgb(37, 41, 48);
+}
+
+::placeholder {
+	color: #a9bbc5;
+	opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #a9bbc5;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+	color: #a9bbc5;
+}

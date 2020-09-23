@@ -1,0 +1,14 @@
+img {
+	width: 100%;
+	border: .1rem solid rgb(84, 95, 104);
+	border-radius: 1px;
+}
+.movie {
+	background-color: rgb(56, 62, 71);
+	box-shadow: 0 0 20px rgb(37, 41, 48);
+	transition: .2s;
+}
+.movie:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}

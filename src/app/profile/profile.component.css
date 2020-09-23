@@ -1,0 +1,37 @@
+.heading {
+	font-family: 'Abel';
+}
+
+input {
+	width: 70%;
+	background-color: #5CCFDB4b;
+	color: var(--light);
+	max-width: 300px;
+	box-shadow: 0 0 20px rgb(37, 41, 48);
+}
+
+::placeholder {
+	color: #a9bbc5;
+	opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #a9bbc5;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+	color: #a9bbc5;
+}
+
+.action-btn {
+	background-color: #5CCFDB4b;
+}
+
+.active {
+	color: var(--text);
+	background-color: var(--hvr-yellow);
+}
+
+.msg {
+	color: var(--green);
+}

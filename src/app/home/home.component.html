@@ -1,0 +1,50 @@
+<section>
+	<div *ngIf="loading; else show">
+		<app-loading></app-loading>
+	</div>
+	<ng-template #show>
+		
+		<div class="mt-2">
+			<p class="font-2rem text-yellow pb-1 heading">Trending now</p>
+			<div class="row">
+				<app-movie-list [movies]="trending" [backdrops]="trendingBackdrops"></app-movie-list>
+				<div class="col-md-2 p-1 btn-holder">
+					<button class="text-yellow px-3 view-btn" routerLink="/view-movies/trending">More</button>
+				</div>
+			</div>
+		</div>
+	
+		<div class="mt-4">
+			<p class="font-2rem text-yellow pb-1 heading">Recommended for you</p>
+			<div *ngIf="userLogged; else warn;">
+				<div class="row">
+					<app-movie-list [movies]="recommended" [backdrops]="recommendedBackdrops"></app-movie-list>
+				</div>
+			</div>
+			<ng-template #warn>
+				<p class="py-2 font-1-25rem">Once you <a routerLink="/login">login</a>, recommended movies for you will show here</p>
+			</ng-template>
+		</div>
+		
+		<div class="mt-4">
+			<p class="font-2rem text-yellow pb-1 heading">Popular Movies</p>
+			<div class="row">
+				<app-movie-list [movies]="popular" [backdrops]="popularBackdrops"></app-movie-list>
+				<div class="col-md-2 p-1 btn-holder">
+					<button class="text-yellow px-3 view-btn" routerLink="/view-movies/popular">More</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mt-4">
+			<p class="font-2rem text-yellow pb-1 heading">Upcoming</p>
+			<div class="row">
+				<app-movie-list [movies]="upcoming" [backdrops]="upcomingBackdrops"></app-movie-list>
+				<div class="col-md-2 p-1 btn-holder">
+					<button class="text-yellow px-3 view-btn" routerLink="/view-movies/upcoming">More</button>
+				</div>
+			</div>
+		</div>
+	
+	</ng-template>
+</section>

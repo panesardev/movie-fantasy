@@ -1,1 +1,102 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/css/bootstrap.grid.css';
+@import 'assets/css/bootstrap.utilities.css'; 
+@import 'assets/css/buttons.css';
+@import 'assets/css/input.css';
+
+:root {	
+    --red:          #EC283F;
+	--hvr-red:      #bb2435;
+	
+	--green:        #09C372;
+	--hvr-green:    #28b66a;
+	
+	--yellow:       #FFBA19;
+	--hvr-yellow:   #e0a418;
+	
+	--sky-blue:		#5CCFDB;
+	--hvr-sky-blue:	#55beca;
+
+	--purple:       #6200EE;
+	--hvr-purple:   #5708c5;
+	
+    --light:        #f0f3f5;
+	--bg-dark:      #0e0f11;
+	--less-dark:	#2e3642;
+	--text: 		#2f353d;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-image: radial-gradient(#2e4b5f, var(--bg-dark));
+	background-size: cover;
+	color: var(--light);
+	font-family: 'open sans';
+	overflow-x: hidden;
+}
+* {
+	margin: 0;
+	box-sizing: border-box;
+	border-radius: 4px;
+	outline: none;
+}
+button, a {
+	transition: .2s;
+}
+button:hover, a:hover {
+	cursor: pointer;
+}
+a, a:hover, a:focus {
+	color: var(--sky-blue);
+}
+
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+
+.text-dark { color: var(--text); }
+.text-red { color: var(--red); }
+.text-green { color: var(--green); }
+.text-purple { color: var(--purple); }
+.text-yellow { color: var(--yellow); }
+.text-light { color: var(--light); }
+.text-skyblue { color: var(--sky-blue); }
+
+.bg-purple { background-color: var(--purple); }
+.bg-light { background-color: var(--light); }
+.bg-red { background-color: var(--red); }
+.bg-green { background-color: var(--green); }
+.bg-yellow { background-color: var(--yellow); }
+.bg-dark { background-color: var(--less-dark); }
+.bg-skyblue { background-color: var(--sky-blue); }
+
+.border { border: .1rem solid #383b42; }
+.border-top { border-top: .1rem solid #383b42; }
+.border-bottom { border-bottom: .1rem solid #383b42; }
+.border-left { border-left: .1rem solid #383b42; }
+.border-right { border-right: .1rem solid #383b42; }
+
+.font-2rem {
+	font-size: 2rem;
+}
+.font-1rem {
+	font-size: 1rem;
+}
+.font-1-5rem {
+	font-size: 1.5rem;
+}
+.font-1-25rem {
+	font-size: 1.25rem;
+}
+.font-1-75rem {
+	font-size: 1.75rem;
+}
+
+.error {
+	width: 70%;
+	color: var(--red);
+	background-color: #ec283f36;
+}
+
+::-webkit-scrollbar { width: 0; }

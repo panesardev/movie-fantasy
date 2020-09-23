@@ -1,0 +1,62 @@
+<section>
+	<div class="wrapper">
+		<p class="text-yellow font-1-75rem my-3">Edit your profile</p>
+		<div class="center animate__animated animate__fadeInUp animate__faster">
+			<p>Your Username cannot be change</p>
+			<p class="font-2rem mt-2"><i class="fas fa-lock"></i> {{ username }}</p>
+
+			<div class="row mb-3">
+				<div class="col-md-6">
+					<button [ngClass]="showDetails ? 'active' : ''" class="px-4 py-1 action-btn" (click)="showDetails = !showDetails">Change your details</button>
+				</div>
+				<div class="col-md-6">
+					<button [ngClass]="!showDetails ? 'active' : ''" class="px-4 py-1 action-btn" (click)="showDetails = !showDetails">Change your password</button>
+				</div>
+			</div>
+
+			<div *ngIf="success"><p class="my-3 msg">{{ success }}</p></div>
+	
+			<form (submit)="update()" *ngIf="showDetails" class="animate__animated animate__fadeInUp animate__faster">
+				<div class="mt-3">
+					<label for="firstName">Enter your firstname</label> <br>
+					<input class="px-3 py-1 mt-1" type="text" [(ngModel)]="firstname" name="firstname" placeholder="first name" autocomplete="on">
+				</div>
+				<div class="mt-3">
+					<label for="username">Enter your lastname</label> <br>
+					<input class="px-3 py-1 mt-1" type="text" [(ngModel)]="lastname" name="lastname" placeholder="last name" autocomplete="on">
+				</div>
+				<div class="mt-3">
+					<label for="username">Select your preference</label> <br>
+					<select [(ngModel)]="selectedGenre" class="mt-2 px-2 py-1" name="genres" style="color: var(--text);">
+						<option *ngFor="let genre of genres" [value]="genre.id">{{ genre.name }}</option>
+					</select>
+				</div>
+				<div class="mt-3">
+					<button class="btn-yellow px-4 py-2" type="submit">Update</button>
+				</div>
+			</form>
+
+			<form (submit)="updatePassword()" *ngIf="!showDetails" class="animate__animated animate__fadeInUp animate__faster">
+				<div *ngIf="error">{{ error }}</div>
+				<div *ngIf="passwordError">
+					<p>Your password must contain:</p>
+					<p>length between 6 to 20 characters</p>
+					<p>At least 1 uppercase</p>
+					<p>At least 1 lowercase</p>
+					<p>At least 1 number</p>
+				</div>
+				<div class="mt-3">
+					<label for="firstName">Enter your new Password</label> <br>
+					<input class="px-3 py-1 mt-1" type="password" [(ngModel)]="changePassword" name="changePassword" placeholder="password" autocomplete="on">
+				</div>
+				<div class="mt-3">
+					<label for="username">Confirm your new Password</label> <br>
+					<input class="px-3 py-1 mt-1" type="password" [(ngModel)]="changePasswordConfirm" name="changePasswordConfirm" placeholder="confirm password" autocomplete="on">
+				</div>
+				<div class="mt-3">
+					<button class="btn-yellow px-4 py-2" type="submit">Update</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

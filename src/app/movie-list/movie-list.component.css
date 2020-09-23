@@ -1,0 +1,41 @@
+img {
+	width: 100%;
+}
+.movie-container {
+	padding: 1px;
+}
+.movie {
+	margin: 2px;
+	padding: 0;
+	transition: .2s;
+	box-shadow: 0 0 20px rgb(37, 41, 48);
+}
+.movie:hover {
+	transform: scale(1.05);
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #0000007c;
+} 
+.movie:hover .overlay {
+	opacity: 1;
+} 
+.text {
+	color: white;
+	font-size: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}

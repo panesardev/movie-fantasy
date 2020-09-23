@@ -1,0 +1,41 @@
+<section class="animate__animated animate__fadeInRight animate__faster">
+	<div class="wrapper center">
+		<form ngNativeValidate (submit)="signUp()">
+			<div *ngIf="passwordError">
+				<p>Your password must contain:</p>
+				<p>length between 6 to 20 characters</p>
+				<p>At least 1 uppercase</p>
+				<p>At least 1 lowercase</p>
+				<p>At least 1 number</p>
+			</div>
+			<div *ngIf="error">
+				<p class="error center mx-auto px-3 py-2">{{ error }}</p>
+			</div>
+			<div class="mt-3">
+				<label for="username">Enter your username</label> <br>
+				<input class="px-3 py-1 mt-1" type="text" [(ngModel)]="username" name="username" placeholder="username" autocomplete="on" required>
+			</div>
+			<div class="mt-3">
+				<label for="password">Enter your password</label> <br>
+				<input class="px-3 py-1 mt-1" type="password" [(ngModel)]="password" name="password" placeholder="password" autocomplete="on" required>
+			</div>
+			<div class="mt-3">
+				<label for="firstName">Enter your firstname</label> <br>
+				<input class="px-3 py-1 mt-1" type="text" [(ngModel)]="firstname" name="firstname" placeholder="first name" autocomplete="on" required>
+			</div>
+			<div class="mt-3">
+				<label for="username">Enter your lastname</label> <br>
+				<input class="px-3 py-1 mt-1" type="text" [(ngModel)]="lastname" name="lastname" placeholder="last name" autocomplete="on">
+			</div>
+			<div class="mt-3">
+				<label for="username">Select your preference</label> <br>
+				<select [(ngModel)]="selectedGenre" class="mt-2 px-2 py-1" name="genres" style="color: var(--text);">
+					<option *ngFor="let genre of genres" [value]="genre.id">{{ genre.name }}</option>
+				</select>
+			</div>
+			<div class="mt-3">
+				<button class="btn-yellow px-4 py-2" type="submit">Sign Up</button>
+			</div>
+		</form>
+	</div>
+</section>

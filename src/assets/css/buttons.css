@@ -1,0 +1,44 @@
+button {
+	border: none;
+	border-radius: 3px;
+	outline: none;
+}
+button:focus {
+	box-shadow: 0 0 5px rgba(255, 255, 255, 0.548);
+}
+
+.btn-purple {
+	background-color: var(--purple);
+}
+.btn-purple:hover {
+	background-color: var(--hvr-purple);
+}
+
+.btn-sky-blue {
+	background-color: var(--sky-blue);
+}
+.btn-sky-blue:hover {
+	background-color: var(--hvr-sky-blue);
+}
+
+.btn-red {
+	background-color: var(--red);
+}
+.btn-red:hover {
+	background-color: var(--hvr-red);
+}
+
+.btn-green {
+	background-color: var(--green);
+}
+.btn-green:hover {
+	background-color: var(--hvr-green);
+}
+
+.btn-yellow {
+	color: var(--text);
+	background-color: var(--yellow);
+}
+.btn-yellow:hover {
+	background-color: var(--hvr-yellow);
+}
